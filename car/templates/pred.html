@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css'%}">
+
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+
+    </head>
+    
+    <body>
+    
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">Auto<em> Club</em></a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="cars.html" class="active">Cars</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
+                              
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="about.html">About Us</a>
+                                    <a class="dropdown-item" href="blog.html">Blog</a>
+                                    <a class="dropdown-item" href="team.html">Team</a>
+                                    <a class="dropdown-item" href="testimonials.html">Testimonials</a>
+                                    <a class="dropdown-item" href="faq.html">FAQ</a>
+                                    <a class="dropdown-item" href="terms.html">Terms</a>
+                                </div>
+                            </li>
+                            <li><a href="contact.html">Contact</a></li> 
+                        </ul>        
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Call to Action Start ***** -->
+    <section class="section section-bg" id="call-to-action" style="background-image: url(static/images/banner-image-1-1920x500.jpg)">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="cta-content">
+                        <br>
+                        <br>
+                        <h2>Valuation Of Used Cars Online<em></em></h2>
+                        <p>Fill Few Simple Details About Your Car Please! </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Call to Action End ***** -->
+
+    <!-- ***** Fleet Starts ***** -->
+    <section class="section" id="trainers">
+        <div class="container">
+            <br>
+            <br>
+            <div class="contact-form">
+                <form action="{%url 'predict'%}" method="post">
+                {%csrf_token%}
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            <div class="form-group">
+                                <label>Manufacture Year:</label>
+                                <input name="Year"  required="required">
+                            </div>
+                        </div>
+                
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            <div class="form-group">
+                                <label>Kms_Driven:</label>
+                                <input   name="Kilometers_Driven" required="required">
+
+                            </div>
+                        </div>
+                
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            <div class="form-group">
+                                <label>Make:</label>
+                                <select name="Manufacturer"  required="required">
+                                    <option value="Ford">Ford</option>
+                                    <option value="Maruti">Maruti</option>
+                                    <option value="Honda">Honda</option>
+                                    <option value="Audi">Audi</option>
+                                    <option value="Nissan">Nissan</option>
+                                    <option value="Hyundai">Hyundai</option>
+                                    <option value="Mahindra">Mahindra</option>
+                                    <option value="Tata">Tata</option>
+                                    <option value="BMW">BMW</option>
+                                    <option value="Skoda">Skoda</option>
+                                    <option value="Porsche">Porsche</option>
+                                    <option value="Toyota">Toyota</option>
+                                    <option value="Chevrolet">Chevrolet</option>
+                                    <option value="Mercedes-Benz">Mercedes-Benz</option>
+                                    <option value="Land">Land</option>
+                                    <option value="Force">Force</option>
+                                    <option value="Volkswagen">Volkswagen</option>
+                                    <option value="Renault">Renault</option>
+                                    <option value="Jaguar">Jaguar</option>
+                                    <option value="Volvo">Volvo</option>
+                                    <option value="Mini">Mini</option>
+                                    <option value="Mitsubishi">Mitsubishi</option>
+                                    <option value="Fiat">Fiat</option>
+                                    <option value="Ambassador">Ambassador</option>
+                                    <option value="Datsun">Datsun</option>
+                                    <option value="ISUZU">ISUZU</option>
+                                    <option value="Jeep">Jeep</option>
+                                    <option value="Bentley">Bentley</option>
+                                    <option value="Smart">Smart</option>
+                                    <option value="Lamborghini">Lamborghini</option>
+
+
+                                </select>
+                            </div>
+                        </div>
+                
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            <div class="form-group">
+                                <label>Model:</label>
+                                <input  name="Model" required="required">
+                            </div>
+                        </div>
+                
+                
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            <div class="form-group">
+                                <label>Mileage:</label>
+                                <input name="Mileage" required="required">
+                            </div>
+                        </div>
+                
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            <div class="form-group">
+                                <label>Engine size:</label>
+                                <input  name="Engine" required="required">
+                    
+                            </div>
+                        </div>
+                
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            <div class="form-group">
+                                <label>Power:</label>
+                                <input name="Power" required="required">
+                            </div>
+                        </div>
+                
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            <div class="form-group">
+                                <label>Fuel:</label>
+                     
+                                <select name="Fuel_Type" id="fuel" required="required">
+                                    <option value="Petrol">Petrol</option>
+                                    <option value="Diesel">Diesel</option>
+                                    <option value="CNG">CNG</option>
+                                    <option value="LPG">LPG</option>
+                                    <option value="Electric">Electric</option>
+                                 </select>
+                            </div>
+                        </div>
+                
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            <div class="form-group">
+                                <label>Transmission Type:</label>
+                     
+                                <select name="Transmission" id="transmission" required="required">
+                                    <option value="Mannual">Mannual</option>
+                                    <option value="Automatic">Automatic</option>
+                                 </select>
+                            </div>
+                        </div>
+                
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            <div class="form-group">
+                                <label>Owner Type:</label>
+                     
+                                <select id="owner" name="Owner_Type" required="required">
+                                    <option value="First">First</option>
+                                    <option value="Second">Second</option>
+                                    <option value="Third">Third</option>
+                                    <option value="Fourth">Fourth and Above</option>
+          
+                                 </select>
+                            </div>
+                        </div>
+                
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            <div class="form-group">
+                                <label>Number of seats:</label>
+                                <input id="fourth" name="Seats" required="required">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-4 offset-sm-4">
+                      <div class="main-button text-center">
+                          <button id="sub" type="submit ">Evaluate</button>
+                      </div>
+                    </div>
+                    <br>
+                    <br>
+                </form>
+            </div>
+
+        </div>
+    </section>
+    <!-- ***** Fleet Ends ***** -->
+
+    
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>
+                        Copyright © 2020 Auto Club
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="static/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="static/js/popper.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="static/js/scrollreveal.min.js"></script>
+    <script src="static/js/waypoints.min.js"></script>
+    <script src="static/js/jquery.counterup.min.js"></script>
+    <script src="static/js/imgfix.min.js"></script> 
+    <script src="static/js/mixitup.js"></script> 
+    <script src="static/js/accordions.js"></script>
+    
+    <!-- Global Init -->
+    <script src="static/js/custom.js"></script>
+
+  </body>
+</html>

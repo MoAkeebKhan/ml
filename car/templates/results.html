@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+    <title>Used Car Evaluation</title>
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css'%}">
+
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+
+    </head>
+    
+    <body>
+    
+
+    
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">AUTO<em> CLUB</em></a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="cars.html">Cars</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
+                              
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item"  href="about.html">About Us</a>
+                                    <a class="dropdown-item" href="blog.html">Blog</a>
+                                    <a class="dropdown-item" href="team.html">Team</a>
+                                    <a class="dropdown-item" href="testimonials.html">Testimonials</a>
+                                    <a class="dropdown-item" href="faq.html">FAQ</a>
+                                    <a class="dropdown-item active" href="terms.html">Terms</a>
+                                </div>
+                            </li>
+                            <li><a href="contact.html">Contact</a></li> 
+                        </ul>        
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <section class="section section-bg" id="call-to-action" style="background-image: url(assets/images/banner-image-1-1920x500.jpg)">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="cta-content">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <h2>{{Manufacturer}} {{Model}} ({{Year}}) <i class="fa fa-check" aria-hidden="true"></i></em></h2>
+                        <p>{{Kilometers_Driven}} kms - {{Owner_Type}} Owner - {{Fuel_Type}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <div class="container" style="background:#ffd6cc;width:45%;height:250px;"> 
+        <br>
+        <p style="color:black;font-weight:600">Recommended car price to be in between</p>
+        <br>
+        <p style="font-size:40px;font-weight:700;color:black;position:relative;top:30px;left:10px"><i class="fa fa-inr" aria-hidden="true"></i>  {{Good}} Lakh</p>
+        <p style="font-size:40px;font-weight:700;color:black;position:relative;left:350px;bottom:9px"><i class="fa fa-inr" aria-hidden="true"></i> {{Answer}} Lakh </p>
+        <hr style="border-top: dotted 5px; width:100px; position:relative;bottom:45px;color:#ff3300" />
+        <p style="color:#ff3300;position:relative;left:15px;bottom:50px;font-weight:700">GOOD CONDITION</p>
+        <p style="color:#ff3300;position:relative;left:355px;bottom:76px;font-weight:700">SUPERB CONDITION</p>
+
+    </div>
+    <div class="col-sm-4 offset-sm-4">
+        <div class="main-button text-center">
+        <a href="{%url 'usedCarEvaluation'%}" style="position:relative;top:20px ;background-color:#ff3300" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Evaluate Again</a>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div>
+    </div>
+    <!-- jQuery -->
+    <script src="static/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="static/js/popper.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="static/js/scrollreveal.min.js"></script>
+    <script src="static/js/waypoints.min.js"></script>
+    <script src="static/js/jquery.counterup.min.js"></script>
+    <script src="static/js/imgfix.min.js"></script> 
+    <script src="static/js/mixitup.js"></script> 
+    <script src="static/js/accordions.js"></script>
+    
+    <!-- Global Init -->
+    <script src="static/js/custom.js"></script>
+
+  </body>
+</html>
